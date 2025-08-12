@@ -1,0 +1,85 @@
+.saree-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.saree-card__media {
+  position: relative;
+  padding-top: 66.66%;
+  background: #f7f7f8;
+}
+
+.saree-card__image,
+.saree-card__image--placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.saree-card__image {
+  opacity: 0;
+  transition: opacity 220ms ease-out;
+}
+
+.saree-card__image.is-loaded {
+  opacity: 1;
+}
+
+.saree-card__body {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+}
+
+.saree-card__title {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.saree-card__description {
+  margin: 0;
+  color: #4b5563; /* gray-600 */
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+.saree-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.saree-card__price {
+  font-weight: 600;
+}
+
+.saree-card__price--contact {
+  color: #6b7280; /* gray-500 */
+}
+
+.saree-card__button {
+  appearance: none;
+  border: none;
+  background: #2563eb; /* blue-600 */
+  color: white;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.saree-card__button:disabled {
+  background: #c7d2fe; /* indigo-200-ish */
+  cursor: not-allowed;
+}
